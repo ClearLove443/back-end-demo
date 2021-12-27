@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from src.controller import home_controller
+from src.controller.home_controller import HomeController
 
-api_router = APIRouter()
-api_router.include_router(home_controller.router, tags=["home"])
+api_router:APIRouter = APIRouter()
+api_router.include_router(HomeController.router, tags=["home"])

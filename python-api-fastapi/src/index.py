@@ -4,7 +4,7 @@ from starlette.middleware.cors import CORSMiddleware
 from src.config import settings
 from src.routes import api_router
 
-app = FastAPI()
+app:FastAPI = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,

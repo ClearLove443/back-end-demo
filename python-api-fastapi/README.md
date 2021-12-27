@@ -24,6 +24,10 @@ pip install -r requirements.txt
 
 ```bash
 source env/Scripts/activate
+
+## 不生成 __pycache__文件夹
+export PYTHONDONTWRITEBYTECODE=1
+
 uvicorn src.index:app --reload
 uvicorn src.index:app --host 0.0.0.0 --port 8000 --reload
 ```

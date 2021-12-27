@@ -1,10 +1,10 @@
-const gulp = require("gulp");
+const gulp = require('gulp');
 
-const ts = require("gulp-typescript");
-const tsProject = ts.createProject("tsconfig.json");
+const ts = require('gulp-typescript');
+const tsProject = ts.createProject('tsconfig.json');
 
-gulp.task("typescript", () => {
-  return tsProject.src().pipe(tsProject()).js.pipe(gulp.dest("build"));
+gulp.task('typescript', () => {
+  return tsProject.src().pipe(tsProject()).js.pipe(gulp.dest('build'));
 });
 
 // gulp 3
@@ -15,9 +15,9 @@ gulp.task("typescript", () => {
 
 // 并行执行
 gulp.task(
-  "default",
-  gulp.parallel("typescript", (cb) => {
-    gulp.watch("**/*.ts", gulp.series("typescript"));
-    cb();
-  })
+    'default',
+    gulp.parallel('typescript', (cb) => {
+      gulp.watch('**/*.ts', gulp.series('typescript'));
+      cb();
+    }),
 );

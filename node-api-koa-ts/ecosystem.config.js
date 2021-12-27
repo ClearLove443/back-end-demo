@@ -1,4 +1,4 @@
-const { name } = require('./package.json');
+const {name} = require('./package.json');
 const path = require('path');
 
 module.exports = {
@@ -11,8 +11,8 @@ module.exports = {
       watch: true,
       env_production: {
         NODE_ENV: 'production',
-        PORT: 8080
-      }
-    }
-  ]
+        PORT: 8080,
+      },
+    },
+  ],
 };
