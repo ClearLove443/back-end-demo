@@ -1,4 +1,5 @@
 import HomeService from '../service/home-service';
+import {Context} from 'koa';
 /**
  * Adds two numbers together.
  * @param {body} ctx The first number.
@@ -8,7 +9,7 @@ import HomeService from '../service/home-service';
 class HomeController {
   private service: HomeService = new HomeService();
 
-  hello = async (ctx: { body: unknown; }) => {
+  hello = async (ctx: Context) => {
     ctx.body = await this.service.hello();
   };
 }

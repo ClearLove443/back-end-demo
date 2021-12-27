@@ -1,11 +1,12 @@
+import { Request, Response } from 'express';
 import {homeService} from '../service/home-service.js';
 /**
  * Adds two numbers together.
- * @param {any} req The first number.
- * @param {any} res The second number.
+ * @param {Request} req The first number.
+ * @param {Response} res The second number.
  */
 class HomeController {
-  hello = (req: any, res: any) => {
+  hello = (req: Request, res: Response) => {
     homeService.hello(req, res);
   };
 }

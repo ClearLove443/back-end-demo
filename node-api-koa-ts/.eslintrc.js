@@ -12,6 +12,7 @@ module.exports = {
   plugins: ['@typescript-eslint'],
   rules: {
     'no-var': 'error',
+    '@typescript-eslint/no-explicit-any': 2,
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
   },
 };

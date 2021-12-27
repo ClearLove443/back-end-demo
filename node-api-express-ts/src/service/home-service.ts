@@ -1,3 +1,5 @@
+import { Request, Response } from "express";
+
 interface data {
   id: string;
   name: string;
@@ -5,7 +7,7 @@ interface data {
 
 class HomeService {
 
-  hello = (req: { url: any; }, res: { json: (arg0: { Dadas: data[]; }) => void; }) => {
+  hello = (req: Request , res: Response ) => {
     const datas = [{id: '0001', name: '0001'}];
     const resData: { datas: data[] } = {
       datas: [],
